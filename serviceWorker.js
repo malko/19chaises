@@ -5,10 +5,10 @@ self.addEventListener('install', (e) => {
 	 caches.open(cacheName)
 	 	.then((cache) => {
 			return cache.addAll([
-				`/index.html`,
-				`/styles.css`,
-				`/main.js`,
-				`/19chaises.wav`
+				`./index.html`,
+				`./styles.css`,
+				`./main.js`,
+				`./19chaises.wav`
 			])
 			.then(() => self.skipWaiting());
 	 	})

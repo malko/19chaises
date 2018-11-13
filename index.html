@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<base href="/">
 	<link rel="manifest" href="manifest.webmanifest" />
 	<link rel="icon" type="image/png" href="logo-128.png" sizes="128x128" />
 	<link rel='stylesheet' href='styles.css'>
@@ -17,11 +16,11 @@
 <div id='installer'>
 	<button class='button'>Install</button>
 </div>
-<script src=/main.js></script>
+<script src=main.js></script>
 <script>
 	if('serviceWorker' in navigator) {
 		navigator.serviceWorker
-			.register('/serviceWorker.js', { scope: '/' })
+			.register('./serviceWorker.js', { scope: './' })
 			.then(function(registration) {
 				console.log('serviceWorker registered');
 			})

@@ -125,7 +125,7 @@
 
 
 	window.addEventListener('load', function() {
-		const chaiseSound = new Sound(audioCtx, '/19chaises.wav');
+		const chaiseSound = new Sound(audioCtx, './19chaises.wav');
 		const chaiseButton = new SoundButton(document.getElementById('chaises'), chaiseSound);
 		const installer = new Installer(document.getElementById('installer'));
 

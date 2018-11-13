@@ -61,7 +61,7 @@ html, body {
 #chaises {
 	height: 50vh;
 	width: 50vh;
-	background-image: url('/logo-192.png');
+	background-image: url('./logo-192.png');
 	background-size: contain;
 	position: relative;
 	box-shadow: 1px 1px 10px 2px #000;
