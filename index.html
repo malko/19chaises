@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<base href="/">
+	<link rel="manifest" href="manifest.webmanifest" />
+	<link rel="icon" type="image/png" href="logo-128.png" sizes="128x128" />
+	<link rel='stylesheet' href='styles.css'>
+	<!--script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.7/pwacompat.min.js"
+		integrity="sha384-ptgwb3/v69WGur7IwSnWOowVxE7hcRB3DG/EiHdejrw2sFNwUHynFbiRMPxc4hdS"
+		crossorigin="anonymous"></script-->
+</head>
+<body>
+<div id='container'>
+	<div id="chaises"></div>
+</div>
+<div id='installer'>
+	<button class='button'>Install</button>
+</div>
+<script src=/main.js></script>
+<script>
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker
+			.register('/serviceWorker.js', { scope: '/' })
+			.then(function(registration) {
+				console.log('serviceWorker registered');
+			})
+		;
+
+		navigator.serviceWorker
+			.ready
+			.then(function(registration) {
+				console.log('serviceWorker ready');
+			})
+		;
+	}
+</script>
+</body>
+</html>

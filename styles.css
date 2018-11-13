@@ -1,0 +1,76 @@
+/*
+ *
+ *  Air Horner
+ *  Copyright 2015 Google Inc. All rights reserved.
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License
+ *
+ */
+html, body {
+	margin: 0;
+	background-color: #333;
+	color: #fff;
+	height: 100%;
+}
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+#container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#installer {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	text-align: center;
+	transition: opacity 300ms ease-in-out;
+}
+
+#installer.available {
+	opacity: 1;
+}
+
+#installer .button {
+	border: white 1px solid;
+	margin:10px;
+	padding: 10px;
+	color: white;
+	background-color: transparent;
+}
+
+#chaises {
+	height: 50vh;
+	width: 50vh;
+	background-image: url('/logo-192.png');
+	background-size: contain;
+	position: relative;
+	box-shadow: 1px 1px 10px 2px #000;
+}
+
+#chaises:active, #chaises.playing {
+	top: 1px;
+	left: 1px;
+	opacity: .8;
+	box-shadow: 0px 0px 5px 1px #000;
+}
+
